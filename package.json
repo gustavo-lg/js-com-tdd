@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/gustavo-lg/js-com-tdd/issues"
   },
-  "homepage": "https://github.com/gustavo-lg/js-com-tdd#readme"
+  "homepage": "https://github.com/gustavo-lg/js-com-tdd#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
 }
