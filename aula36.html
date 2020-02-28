@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const currency = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({currency: 'euro', value: 3.50});
+        }, 2000);
+    });
+
+    const countries = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(['Ireland', 'England', 'Scotland']);
+        }, 1000);
+    });
+
+    //all recebe lista com todas as promises, só manda resposta com todas respondidas
+    //utilizar quando é necessário todas as resposta
+    Promise
+        .all([currency, countries])
+        .then(responses => {
+            console.log(responses);
+        })
+
+    //race recebe lista com todas as promises, quando a primeira promise é resolvida ignora o resto.
+    //utilizar quando for necessário somente uma resposta  
+    Promise
+        .race([currency, countries])
+        .then(responses => {
+            console.log(responses);
+        })
+</script>
+</html>

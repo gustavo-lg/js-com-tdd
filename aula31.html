@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let front = ['react', 'vue', 'angular'];
+    let back = ['java', 'python', 'ruby'];
+
+    //-Sem Spread Operator
+    //let fullStack = [];
+    //fullStack = fullStack.concat(front);
+    //fullStack.push('RxJS');
+    //fullStack = fullStack.concat(back);
+
+    //-Com Spread Operator = -3 linhas
+    let fullStack = [...front, 'React', ...back];
+
+    console.log('fullStack: ', fullStack);
+
+
+    //console.log([...'Gustavo']);
+    //console.log(...front);
+</script>
+</html>
